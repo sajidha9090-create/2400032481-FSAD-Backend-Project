@@ -31,5 +31,5 @@ USER appuser
 # Expose port (Render will set PORT env var)
 EXPOSE 8080
 
-# Run with render profile — shell form for env var expansion
-CMD java -jar -Dspring.profiles.active=render -Dserver.port=${PORT:-8080} app.jar
+
+CMD java -jar -Dspring.profiles.active=h2 -Dserver.port=${PORT:-8080} app.jar
